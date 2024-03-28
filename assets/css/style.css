@@ -1,0 +1,145 @@
+/* Valores */
+body {
+    background-color: rgb(1, 53, 1);
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  footer i {
+    color: white;
+  }
+
+  /* Card */
+.card-title {
+  font-weight: bold;
+}
+
+/* Espaciador */
+hr {
+  color: rgba(51, 138, 160, 0.938);
+  opacity: 1;
+}
+
+.centrado {
+  text-align: center;
+}
+
+/* Carousel */
+.my-carousel {
+  margin-bottom: 70px;
+}
+/* Quienes Somos */
+.quienes-somos .card-title {
+  padding: 2px 0 2px 0;
+}
+
+.card-text_size {
+  max-height: 305px;
+  overflow: hidden;
+}
+.quienes-somos {
+  margin-bottom: 50px;
+}
+/* Destacadas */
+.card-img-top {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.cards-destacadas {
+  margin-bottom: 100px;
+}
+/* Footer */
+
+footer {
+  margin-top: 30px;
+}
+.brand-text-footer {
+  font-family: "Birthstone";
+  font-size: 40px;
+  margin: 0;
+}
+
+/* Control Iconos*/
+.footer-icon {
+  display: inline-block;
+  padding-top: 5px;
+  margin-right: 12px;
+}
+/* Color de Fondo */
+.bg-celeste {
+  background-color: rgba(51, 138, 160, 0.938);
+}
+
+@media screen and (max-width: 760px) {
+  /* NAV Logo SVG */
+  .brand-svg {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+
+  /* Carousel */
+  .my-carousel {
+    margin-bottom: 20px;
+  }
+
+  /* Ocultar Small - Quienes Somos y Menu Quienes Somos*/
+  .ocultar-sm {
+    display: none;
+  }
+  /* Destacadas */
+  .card {
+    margin-bottom: 20px;
+    border-radius: 3px;
+  }
+  .cards-destacadas {
+    margin-bottom: 20px;
+  }
+  /* Footer */
+
+  .brand-text-footer {
+    font-family: "Birthstone";
+    font-size: 30px;
+    margin: 0;
+  }
+  /* Control Iconos*/
+  .footer-icon {
+    font-size: 8px;
+    display: inline-block;
+    padding-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Animaciones CSS & JS*/
+.que-vuele {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
