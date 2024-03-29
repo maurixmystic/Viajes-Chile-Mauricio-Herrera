@@ -1,3 +1,7 @@
+//Mensaje de Bienvenida
+window.onload = function() {
+    alert('¡Bienvenido a mi sitio web!');
+};
 
 //Mensaje de Bienvenida al pulsar el logo del avion:
 
@@ -51,3 +55,17 @@ qshRoute.addEventListener("click", function () {
     // Por ejemplo, si tienes una clase 'stop-rotate' que detiene el giro, puedes hacer lo siguiente:
     qspRoute.classList.toggle('stop-rotate');
 });
+
+
+//Agregar Brillo a las imagenes al hacer click sobre ellas:
+
+// Primero, seleccionas todas las imágenes dentro de los divs con la clase 'card'
+let imagenes = document.querySelectorAll('.card img');
+
+// Luego, recorres todas las imágenes y les agregas el event listener
+for (let i = 0; i < imagenes.length; i++) {
+    imagenes[i].addEventListener("click", function () {
+        // Cuando haces clic en una imagen, se agrega o se quita la clase 'brillo'
+        this.classList.toggle('brillo');
+    });
+}
