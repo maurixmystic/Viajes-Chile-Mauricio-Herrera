@@ -1,29 +1,53 @@
-// Declaracion de constantes
-//SVG Logo
-const planeta = document.getElementById("planeta");
 
-//Quienes Somos Cards (h5)
-const qshPlane = document.getElementById("qsh-plane");
-const qshMountain = document.getElementById("qsh-mountain");
-const qshRoute = document.getElementById("qsh-route");
+//Mensaje de Bienvenida al pulsar el logo del avion:
 
-//Quienes Somos Cards (p)
-const qspPlane = document.getElementById("qsp-plane");
-const qspMountain = document.getElementById("qsp-mountain");
-const qspRoute = document.getElementById("qsp-route");
+// Primero, debes seleccionar el elemento con el id 'qsh-plane'
+let qshPlane = document.getElementById('qsh-plane');
 
+// Luego, debes definir la variable 'jetLag'
+let Bienvenido = false;
 
-// El avion rotara
-planeta.addEventListener("click",function () {
-    planeta.classList.toggle('que-vuele'); 
+// Finalmente, puedes agregar el event listener a 'qshPlane'
+qshPlane.addEventListener("click", function () {
+    Bienvenido = !Bienvenido;
+    console.log(Bienvenido);
+    if (Bienvenido === true) {
+        alert('Bienvenido!');    
+    } else {
+        alert('Listo para Viajar!');        
+    }
 });
 
-// Oculta o Muestra P de Quienes Somos Card 2
-qshMountain.addEventListener("click",function () {
+
+
+// Oculta o muestra el Parrafo de Quienes Somos Card n2:
+
+// Primero, debes seleccionar el elemento con el id 'qsh-mountain'
+let qshMountain = document.getElementById('qsh-mountain');
+
+// Luego, debes seleccionar el elemento con el id 'qsp-mountain'
+let qspMountain = document.getElementById('qsp-mountain');
+
+// Finalmente, puedes agregar el event listener a 'qshMountain'
+qshMountain.addEventListener("click", function () {
     qspMountain.classList.toggle('d-none'); 
 });
 
-// Hace girar el P de Quienes Somos Card 3
-qshRoute.addEventListener("click",function () {
+
+// Hacer Girar el Parrafo de la tarjeta Quienes Somos Card n3:
+
+// Primero, seleccionas el elemento con el id 'qsh-route'
+let qshRoute = document.getElementById('qsh-route');
+
+// Luego, seleccionas el elemento con el id 'qsp-route'
+let qspRoute = document.getElementById('qsp-route');
+
+// Finalmente, agregas el event listener a 'qshRoute'
+qshRoute.addEventListener("click", function () {
+    // Si 'qspRoute' tiene la clase 'que-vuele', la elimina. Si no la tiene, la agrega.
     qspRoute.classList.toggle('que-vuele'); 
+
+    // Aquí puedes agregar la lógica para detener el giro del texto
+    // Por ejemplo, si tienes una clase 'stop-rotate' que detiene el giro, puedes hacer lo siguiente:
+    qspRoute.classList.toggle('stop-rotate');
 });
